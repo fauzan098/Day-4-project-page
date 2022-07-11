@@ -6,8 +6,8 @@ function addproject(event){
     // console.log("berhasil");
 
     let projectName = document.getElementById("project-name").value
-    let startDate = document.getElementById("startDate").value
-    let endDate = document.getElementById("endDate").value
+    // let startDate = document.getElementById("startDate").value
+    // let endDate = document.getElementById("endDate").value
     let description = document.getElementById("description").value
     let image = document.getElementById("projectimage")
 
@@ -17,7 +17,7 @@ function addproject(event){
         projectName,
         description,
         image,
-        duration: countDuration(new Date(startDate), new Date(endDate)),
+        // duration: countDuration(new Date(startDate), new Date(endDate)),
         technologies: filterChecboxChecked(),
     }
     projects.push(project)
@@ -56,7 +56,7 @@ function renderProjects(){
             <img src="${projects[i].image}" alt="">
         </a>
         <h2>${projects[i].projectName}</h2>
-        <span>durasi : ${projects[i].duration}</span>
+        <span>durasi : 3 bulan </span>
         <div class="content-project">
             <p>${projects[i].description}</p>    
         </div>
@@ -76,12 +76,12 @@ function renderProjects(){
 }
 
 // count time 
-function countDuration(startDate, endDate) {
-    const result =
-      startDate.getMonth() -
-      endDate.getMonth() +
-      12 * (endDate.getFullYear() - startDate.getFullYear());
+// function countDuration(startDate, endDate) {
+//     const result =
+//       startDate.getMonth() -
+//       endDate.getMonth() +
+//       12 * (endDate.getFullYear() - startDate.getFullYear());
   
-    return Math.abs(result);
-  }
+//     return Math.abs(result);
+//   }
   
